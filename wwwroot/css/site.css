@@ -1,0 +1,409 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background-color: #122A59;
+    /*background-color: lightgray;*/
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+.divider{
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.dividerHeading {
+    background-color: #B4E6F9;
+    width: 100%;
+    margin-bottom: 0px;
+    border: gray 2px solid;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+}
+
+.dividerContent {
+    background-color: #070F26;
+    color: white;
+    margin-bottom: 20px;
+    width: 100%;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+}
+
+.twoCol {
+    display: flex;
+}
+
+
+.icon{
+    margin-right: 20px
+}
+
+.customNavBar {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 32px;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    /* padding: .5rem 1rem; */
+}
+
+.projectGrid{
+    display: grid;
+    grid-template-columns: auto auto;
+
+}
+
+.gridItem{
+    border: 1px white solid;
+    padding: 5px 10px 15px 10px;
+    margin: 0px 5px 40px 5px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 200px auto;
+    align-items: self-start;
+}
+
+.titleBox {
+    border: none;
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.langBox {
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.itemOptions{
+    border: none;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-left: 10px;
+    position: relative;
+    margin-top: 10px;
+}
+
+.customButton {
+    text-align: center;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    height: 45px;
+}
+
+.infoButton {
+    background-color: darkorange;
+    height: 70px;
+}
+
+.infoButton:hover{
+    background-color: #ffb500;
+}
+
+.sourceButton {
+    background-color: darkmagenta;
+    height: 70px;
+}
+
+.sourceButton:hover {
+    background-color: rgb(255, 0, 250);
+}
+
+.demoButton {
+    background-color: darkcyan;
+    height: 70px;
+}
+
+.demoButton:hover{
+    background-color: rgb(0, 195, 220)
+}
+
+.cSharpButton{
+    background-color: mediumpurple;
+}
+
+.xamarinButton {
+    background-color: dodgerblue;
+}
+
+.wpfButton {
+    background-color: darkblue;
+}
+
+.winFormsButton {
+    background-color: darkslategrey;
+}
+
+.aspNetButton {
+    background-color: darkred;
+}
+
+.htmlButton {
+    background-color: orangered;
+}
+
+.cssButton{
+    background-color: darkblue;
+}
+
+.jsButton {
+    background-color: saddlebrown;
+}
+
+.pythonButton {
+    background-color: goldenrod;
+}
+
+.flaskButton {
+    background-color: darkgreen;
+}
+
+.sqlButton {
+    background-color: limegreen;
+}
+
+.javaButton{
+    background-color: rgb(229, 84, 0);
+}
+
+.matlabButton{
+    background-color: rgb(7, 208, 191);
+}
+
+.cButton {
+    background-color: rgb(0, 83, 175);
+}
+
+.cplusButton{
+    background-color: rgb(102, 59, 177);
+}
+
+.linuxButton{
+    background-color: rgb(225, 173, 1);
+}
+
+.mipsButton {
+    background-color: rgb(157, 157, 157);
+}
+
+.verilogButton {
+    background-color: #1bb793;
+}
+
+
+.resumeButton {
+    background-color: blue;
+}
+
+.resumeButton:hover {
+    background-color: rgb(140, 203, 255);
+}
+
+
+#langBox1{
+    top: 55px;
+}
+
+#itemOptions1{
+    top: 75px;
+}
+
+#langBox2 {
+    top: 0px;
+}
+
+#itemOptions2 {
+    top: 44px;
+    grid-template-columns: auto auto auto;
+}
+
+#langBox3 {
+    top: 0px;
+    margin-top: 35px;
+}
+
+#itemOptions3 {
+    top: 84px;
+}
+
+#langBox4 {
+    top: 0px;
+    margin-top: 35px;
+}
+
+#itemOptions4 {
+    top: 84px;
+}
+
+.fitImage {
+    width: 90%;
+}
+
+.fitImageContainer{
+    width: 100%;
+    text-align:center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.whiteSpacer{
+    border: 1px white solid;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.threecol {
+    display: flex;
+}
+
+.descText{
+    margin-left: 15px;
+    margin-right: 0px;
+    text-align: left;
+}
+
+#skillsBox {
+    top: -5px;
+    justify-content: flex-start;
+}
+
+#skillsBox2 {
+    top: -5px;
+    justify-content: flex-start;
+}
+
+.jumpTo1 {
+    text-align: right;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-column-gap: 0px;
+}
+
+.jumpTo2 {
+    text-align: right;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-column-gap: 0px;
+}
+
+.jumpTo3 {
+    text-align: right;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    grid-column-gap: 0px;
+}
+
+
+.jumpText {
+    padding: .5rem 0rem;
+}
+
+#homelink{
+    margin-top: -10px;
+}
+
+#mainBar {
+    height: 60px;
+    background-color: #B4E6F9;
+}
+
+#mainLinks {
+    margin-top: 8px;
+}
+
+#download2{
+    height: auto;
+}
+
+#grid2{
+    height: 25em;
+}
+
+.shippingImage{
+    height: 450px;
+    width: auto;
+}
+
+#apiScreenShot{
+    height: auto;
+}

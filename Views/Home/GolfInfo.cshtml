@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewData["Title"] = "Golf Info";
+}
+
+<section class="divider">
+    <div class="dividerHeading" id="App">
+        <h2>Sharecard Mobile App</h2>
+    </div>
+    <div class="dividerContent">
+        <div class="fitImageContainer">
+            <img class="shippingImage" alt="Share Card App Screenshot" src="~/images/ShareCardScreenShot.png" />
+        </div>
+        <div>
+            <p>
+                Sharecard is a mobile app that lets users keep track of a scorecard and share it with other 
+                users. Users start by creating an account or logging in. Next they create a course and enter
+                the par and handicap values for each hole. Courses are stored in a database and any user can
+                select that hole to use for their scorecard. Users start playing and select a course to use,
+                and if other users are playing on the same course they can add them to a leaderboard. The
+                leaderboard lets users compare scorecards while they are playing.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="divider">
+    <div class="dividerHeading" id="App">
+        <h2>Sharecard API/Server</h2>
+    </div>
+    <div class="dividerContent">
+        <div class="fitImageContainer">
+            <img class="shippingImage" id="apiScreenShot" alt="API Server Screenshot" src="~/images/APIScreenShot2.png" />
+        </div>
+        <div>
+            <p>
+                The backend is written in Python and uses the Flask web framework. The RESTful API can handle 
+                GET, PUT, PATCH, and DELETE requests and it will update its SQL database based on requests
+                that are sent by the mobile app. The screenshot is an example of a GET request to see the first
+                entry of the course table of the database. This is how information is displayed as raw data, it
+                is also available as a JSON.
+            </p>
+        </div>
+    </div>
+</section>

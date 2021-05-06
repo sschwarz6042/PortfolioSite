@@ -1,0 +1,170 @@
+﻿
+@{
+    ViewData["Title"] = "Shipping Info";
+}
+
+<section class="divider">
+    <div class="dividerHeading" id="Summary">
+        <h2>Summary of Shipping Manager</h2>
+    </div>
+    <div class="dividerContent">
+        <div class="fitImageContainer">
+            <img class="fitImage" alt="Overview Screenshot" src="~/images/shippingScreenShot.PNG" />
+        </div>
+        <div>
+            <h2>Overview</h2>
+            <p>
+                This was a final project for a course on design patterns. In the class we had to create a project
+                that uses 5 different design patterns. This project uses the Factory, Composite, Dynamic Linkage,
+                State, and Read/Write Lock design patterns.
+            </p>
+
+            <p>
+                <b>Factory</b> - Vehicle is an abstract class with several concrete classes that inherit from it.
+                The subclasses of Vehicle include road vehicles/trucks, ships, trains, and airplanes and they each
+                store different information. The system uses the factory pattern because the GUI passes information
+                to a vehicle factory class and it decides which type of vehicle to create. Other types of vehicles
+                can also be loaded dynamically.
+            </p>
+            <p>
+                <b>Composite</b> - The system uses the composite pattern because it has a hierarchy of items that
+                contain other items. Routes are a list of stops to make and they contain orders. Orders store
+                information like the sender and receiver's names and addresses. Orders also have a reference to an
+                object that implements the ShippingObjectIF interface. Shipping objects can include pallets, crates,
+                boxes, and barrels. Pallets can contain an object that implements the PalletableIF interface which
+                includes boxes and barrels.
+            </p>
+            <p>
+                <b>Dynamic Linkage</b> - The system uses the dynamic linkage pattern because different types of
+                objects can be loaded into the program at runtime. These include vehicles, shipping objects,
+                and palletable objects.
+            </p>
+            <p>
+                <b>State</b> - The system uses the state pattern because it tracks the state of each order. There
+                is an abstract superclass called State, and it has 6 subclasses called NeedRoute, RouteNotAssigned,
+                WaitingInWarehouse, InTransit, Delivered, and OrderCompleted. NeedRoute means an order was created
+                but not assigned a route. RouteNotAssigned means that the order is assigned a route, but the route
+                hasn't been assigned to a vehicle yet. WaitingInWarehouse means that the assigned vehicle hasn't left
+                the warehouse yet. InTransit means that the package is in a truck or other vehicle and is on the
+                way to is destination. Delivered means it has been delivered nad OrderCompleted means that the main
+                office has confirmed the package was delivered and that someone signed for the package. As the
+                program progress and orders are moved and delivered (in the simulation,) the system re-assigns
+                the state of a given order so that users can track their status.
+            </p>
+            <p>
+                <b>Read/Write Lock</b> - The system uses multi-threading and it can have multiple threads trying
+                to change an order's state at a time. The system manages access to an order's state using 
+                read/write locks. In the simulation, one thread represents the company's head office and it
+                assigns routes to vehicles that don't have a route. While doing this, the company thread changes
+                the order's state from RouteNotAssigned to WaitingInWarehouse, and Delivered to OrderCompleted. 
+                There is a thread running for each vehicle and it updates the state of orders from 
+                WaitingInWarehouse, to InTransit, and then to Delivered. Only one thread is able to change the
+                order's state at a time but multiple threads can read the order's state.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="divider">
+    <div class="dividerHeading" id="Output">
+        <h2>Output Panel</h2>
+    </div>
+    <div class="dividerContent">
+        <div class="fitImageContainer">
+            <img class="shippingImage" alt="Output Panel Screenshot" src="~/images/shippingOutputPanel.PNG" />
+        </div>
+        <div>
+            <p>
+                The output panel displays what is happening when the program is running. It contains updates
+                from the company thread and each of the vehicles threads.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="divider">
+    <div class="dividerHeading" id="Company">
+        <h2>Company Tab</h2>
+    </div>
+    <div class="dividerContent">
+        <div class="fitImageContainer">
+            <img class="shippingImage" alt="Comapny Tab Screenshot" src="~/images/shippingCompanyTab.PNG" />
+        </div>
+        <div>
+            <p>
+                The company tab has a list of all of the vehicles that were added to the company.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="divider">
+    <div class="dividerHeading" id="Vehicle">
+        <h2>Vehicle Tab</h2>
+    </div>
+    <div class="dividerContent">
+        <div class="fitImageContainer">
+            <img class="shippingImage" alt="Vehicle Tab Screenshot" src="~/images/shippingVehicleTab.PNG" />
+        </div>
+        <div>
+            <p>
+                The vehicle tab lets users select a vehicle to look at and it displays its information. It
+                also displays its current route and the name and state of each order. The state of each order
+                updates as the program runs and packages are delivered and new routes are assigned.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="divider">
+    <div class="dividerHeading" id="Route">
+        <h2>Route Tab</h2>
+    </div>
+    <div class="dividerContent">
+        <div class="fitImageContainer">
+            <img class="shippingImage" alt="Route Tab Screenshot" src="~/images/shippingRouteTab.PNG" />
+        </div>
+        <div>
+            <p>
+                The route tab shows if a route has been assigned yet, the list of orders and their states. The
+                states of each package update as the route is completed.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="divider">
+    <div class="dividerHeading" id="Order">
+        <h2>Order Tab</h2>
+    </div>
+    <div class="dividerContent">
+        <div class="fitImageContainer">
+            <img class="shippingImage" alt="Order Tab Screenshot" src="~/images/shippingOrderTab.PNG" />
+        </div>
+        <div>
+            <p>
+                The order tab lets users select an order and see their information. It shows shipping 
+                information, the package that is part of the order, and the order's current state which updates
+                as the program runs.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="divider">
+    <div class="dividerHeading" id="Manage">
+        <h2>Manage Tab</h2>
+    </div>
+    <div class="dividerContent">
+        <div class="fitImageContainer">
+            <img class="shippingImage" alt="Manage Tab Screenshot" src="~/images/shippingManageTab.PNG" />
+        </div>
+        <div>
+            <p>
+                The manage tab lets users add packages, orders, routes, and vehicles to the system. When a
+                vehicle is added a new thread starts running and simulates the truck or other vehicle delivering
+                packages.
+            </p>
+        </div>
+    </div>
+</section>

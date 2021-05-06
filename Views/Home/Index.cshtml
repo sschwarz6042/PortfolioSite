@@ -1,0 +1,198 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<section class="divider">
+    <div class="dividerHeading" id="About">
+        <h2>About</h2>
+    </div>
+    <div class="dividerContent twoCol">
+        <div>
+            <h2>Hi, I'm Steven Schwarz</h2>
+            <p>
+                I recently graduated from Penn State World Campus with a degree in software engineering.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="divider">
+    <div class="dividerHeading" id="Projects">
+        <h2>Projects</h2>
+    </div>
+    <div class="dividerContent">
+        <p>Here are some of my best projects:</p>
+        <div class="projectGrid">
+            <div class="gridItem">
+                <img alt="TaxMe Screenshot" height="200px" width="200px" src="~/images/OverviewScreenShot.PNG" />
+                <div class="descText">
+                    <p>
+                        TaxMe is a program that helps users visualize and interact with historic income tax and
+                        government budget data from the IRS website. Users can create their own custom tax plan
+                        and government budget and see how much funding their budget would receive. Users can also
+                        automatically generate tax policies that meet a given budget, or budgets that meet the
+                        current amount of revenue being collected.
+                    </p>
+                </div>
+                <div class="titleBox">
+                    <h2>TaxMe App</h2>
+                    <div class="langBox" id="langBox1">
+                        <p class="customButton cSharpButton">C#</p>
+                        <p class="customButton wpfButton">WPF</p>
+                    </div>
+                </div>
+
+                <div class="itemOptions" id="itemOptions1">
+                    <button class="customButton infoButton" onclick="location.href='@Url.Action("TaxMeInfo", "Home")'">More Info</button>
+                    <button class="customButton sourceButton" onclick="TaxMeSource()">View Source</button>
+                    <button class="customButton demoButton" onclick="TaxMeDemo()">Download .Zip</button>
+                    <script>
+                        function TaxMeSource() {
+                            window.open('@Url.Action("TaxMeSource", "Home")', "_blank");
+                        }
+                        function TaxMeDemo() {
+                            window.open('@Url.Action("TaxMeDemo", "Home")', "_blank");
+                        }
+                    </script>    
+                </div>
+            </div>
+
+            <div class="gridItem" id="grid2">
+                <img height="200px" width="200px" alt="Share Card Screenshot" src="~/images/golfappicon.png" />
+                
+                <div class="descText">
+                    <p>
+                        Sharecard is a mobile app that lets users compare scorecards while they are playing in
+                        a golf tournament. The app is written in C# and uses the Xamarin framework so that it
+                        is compatible with both Android and IOS. All of the data is stored in a remote SQL
+                        database that is accessed through an API. The API is hosted on Heroku and it is written
+                        in Python and uses the Flask web framework.
+                    </p>
+                </div>
+
+                <div class="titleBox">
+                    <h2>Sharecard</h2>
+                    <div class="langBox" id="langBox2">
+                        <p class="customButton cSharpButton">C#</p>
+                        <p class="customButton xamarinButton">Xamarin</p>
+                        <p class="customButton pythonButton">Python</p>
+                        <p class="customButton flaskButton">Flask</p>
+                    </div>
+                </div>
+
+                <div class="itemOptions" id="itemOptions2">
+                    <button class="customButton infoButton" onclick="location.href='@Url.Action("GolfInfo", "Home")'">More Info</button>
+                    <button class="customButton sourceButton" onclick="GolfAppSource()">App Source</button>
+                    <button class="customButton sourceButton" onclick="GolfServerSource()">Server Source</button>
+                    <button class="customButton demoButton" id="download2" onclick="GolfDemo()">Download</button>
+                    <script>
+                        function GolfAppSource() {
+                            window.open('@Url.Action("GolfAppSource", "Home")', "_blank");
+                        }
+                        function GolfServerSource() {
+                            window.open('@Url.Action("GolfServerSource", "Home")', "_blank");
+                        }
+
+                        function GolfDemo() {
+                            window.open('@Url.Action("GolfDemo", "Home")', "_blank");
+                        }
+                    </script>
+                </div>
+            </div>
+            
+            <div class="gridItem">
+                <img alt="Shipping Manager Screenshot" height="200px" width="200px" src="~/images/shippingIcon.png" />
+                <div class="descText">
+                    <p>
+                        Shipping Manager is a program that lets users keep track of vehicles, packages, and
+                        delivery routes for a shipping or trucking company. The program simulates delivering
+                        packages using multithreading. There is a thread for the company office which assigns
+                        routes to vehicles, and each vehicle has a thread running that simulates going to each
+                        stop and delivering a package. While this is happening users can see the state of each
+                        package.
+                    </p>
+                </div>
+                <div class="titleBox">
+                    <h2>Shipping Manager</h2>
+                    <div class="langBox" id="langBox3">
+                        <p class="customButton cSharpButton">C#</p>
+                        <p class="customButton winFormsButton">WinForms</p>
+                    </div>
+                </div>
+
+                <div class="itemOptions" id="itemOptions3">
+                    <button class="customButton infoButton" onclick="location.href='@Url.Action("ShippingInfo", "Home")'">More Info</button>
+                    <button class="customButton sourceButton" onclick="ShippingSource()">View Source</button>
+                    <button class="customButton demoButton" onclick="ShippingDemo()">Download .Zip</button>
+                    <script>
+                        function ShippingSource() {
+                            window.open('@Url.Action("ShippingSource", "Home")', "_blank");
+                        }
+                        function ShippingDemo() {
+                            window.open('@Url.Action("ShippingDemo", "Home")', "_blank");
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="divider">
+    <div class="dividerHeading" id="Skills">
+        <h2>Skills</h2>
+    </div>
+    <div class="dividerContent">
+        <p>Languages and frameworks I am familiar with:</p>
+        <div class="langBox" id="skillsBox">
+            <p class="customButton cSharpButton">C#</p>
+            <p class="customButton wpfButton">WPF</p>
+            <p class="customButton xamarinButton">Xamarin</p>
+            <p class="customButton aspNetButton">ASP.NET</p>
+            <p class="customButton pythonButton">Python</p>
+            <p class="customButton flaskButton">Flask</p>
+            <p class="customButton htmlButton">HTML</p>
+            <p class="customButton cssButton">CSS</p>
+            <p class="customButton jsButton">JavaScript</p>
+            <p class="customButton sqlButton">SQL</p>
+        </div>
+        <hr class="whiteSpacer"/>
+        <p>Other languages and frameworks I have used:</p>
+        <div class="langBox" id="skillsBox2">
+            <p class="customButton javaButton">Java</p>
+            <p class="customButton matlabButton">Matlab</p>
+            <p class="customButton cButton">C</p>
+            <p class="customButton cplusButton">C++</p>
+            <p class="customButton linuxButton">Linux</p>
+            <p class="customButton mipsButton">MIPS assembler</p>
+            <p class="customButton verilogButton">Verilog</p>
+        </div>
+    </div>
+</section>
+
+<section class="divider">
+    <div class="dividerHeading" id="Resume">
+        <h2>Resume</h2>
+    </div>
+    <div class="dividerContent">
+        <button class="customButton resumeButton" onclick="resume()">View Resume</button>
+        <script>
+            function resume() {
+                window.open('@Url.Action("Resume", "Home")', "_blank");
+            }
+        </script>
+    </div>
+</section>
+
+<section class="divider">
+    <div class="dividerHeading" id="Contact">
+        <h2>Contact</h2>
+    </div>
+    <div class="dividerContent">
+        <p>
+            <b>Email:</b> sschwarz250@gmail.com
+        </p>
+        <p>
+            <b>Phone:</b> 1-845-475-2269
+        </p>
+    </div>
+</section>

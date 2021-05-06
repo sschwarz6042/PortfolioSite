@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Portfolio</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3" id="mainBar">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" id="homelink">Steve's Portfolio</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" id="mainLinks">
+                    @if (ViewData["Title"] == "Home Page")
+                    {
+                        <div class="jumpTo1">
+                            <p class="text-dark jumpText">Jump To:</p>
+                            <a class="nav-link text-dark" href="#About">About</a>
+                            <a class="nav-link text-dark" href="#Projects">Projects</a>
+                            <a class="nav-link text-dark" href="#Skills">Skills</a>
+                            <a class="nav-link text-dark" href="#Resume">Resume</a>
+                            <a class="nav-link text-dark" href="#Contact">Contact</a>
+
+                        </div>
+                    }
+                    @if (ViewData["Title"] == "TaxMe Info")
+                    {
+                        <div class="jumpTo2">
+                            <p class="text-dark jumpText">Jump To:</p>
+                            <a class="nav-link text-dark" href="#Overview">Overview</a>
+                            <a class="nav-link text-dark" href="#Glossary">Glossary</a>
+                            <a class="nav-link text-dark" href="#Features">Main Features</a>
+                            <a class="nav-link text-dark" href="#Graphing">Graphing</a>
+                            <a class="nav-link text-dark" href="#Controls">Control Panel</a>
+                            <a class="nav-link text-dark" href="#Output">Output Panel</a>
+
+                        </div>
+                    }
+                    @if (ViewData["Title"] == "Shipping Info")
+                    {
+                    <div class="jumpTo3">
+                        <p class="text-dark jumpText">Jump To:</p>
+                        <a class="nav-link text-dark" href="#Summary">Overview</a>
+                        <a class="nav-link text-dark" href="#Output">Output</a>
+                        <a class="nav-link text-dark" href="#Company">Company</a>
+                        <a class="nav-link text-dark" href="#Vehicle">Vehicles</a>
+                        <a class="nav-link text-dark" href="#Route">Routes</a>
+                        <a class="nav-link text-dark" href="#Order">Orders</a>
+                        <a class="nav-link text-dark" href="#Manage">Manage</a>
+                    </div>
+                    }
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container text-white">
+            &copy; 2021 - Steven Schwarz
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+    

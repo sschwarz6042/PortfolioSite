@@ -1,0 +1,292 @@
+﻿
+@{
+    ViewData["Title"] = "TaxMe Info";
+}
+
+<section class="divider">
+    <div class="dividerHeading" id="Overview">
+        <h2>Summary of TaxMe</h2>
+    </div>
+    <div class="dividerContent">
+        <div class="fitImageContainer">
+            <img class="fitImage" alt="Overview Screenshot" src="~/images/taxMeScrenshot.PNG"/>
+        </div>
+        <div>
+            <h2>Overview</h2>
+            <p>
+                This was a senior project created for Kurt Steiner and his company KS Drone.
+                He wanted a program that helps visualize tax policies, let users customize different
+                variables, and display the effects of custom tax policies and government budgets.
+                The system has built-in features to help display a "Slant Tax" plan that was proposed
+                by our sponsor. It also lets users create UBI policies and generate plans to reduce
+                government debt.
+            </p>
+            <hr class="whiteSpacer" />
+            <h2 id="Glossary">Basic Definitions</h2>
+            <div class="fitImageContainer">
+                <img class="fitImage" alt="Slant Tax explanation" src="~/images/SlantTax2.png" />
+            </div>
+            <h4><b>Slant Tax</b> - a tax plan where the tax rate is 0% for brackets under the poverty line and then it rises linearly to a maximum rate</h4>
+            <br />
+            <h4><b>UBI</b> - Stands for universal basic income and is a proposed policy that would replace welfare payments and would be available to more income brackets than normal welfare programs</h4>
+            <hr class="whiteSpacer" />
+            <h2 id="Features">Main Features:</h2>
+            <ul>
+                <li>Load data for different years from CSV files (uses federal data from IRS.Gov website but can be customized to look at state or local level or data for another country)</li>
+                <li>Let users select which year to look at and display relevant data (by default 2003-2018 are available)</li>
+                <li>Graph income distribution or number of people per income bracket</li>
+                <li>Graph existing tax rate for each income bracket</li>
+                <li>Graph existing revenue per bracket</li>
+                <li>Let users create and modify custom tax plans</li>
+                <li>Let users save or delete custom tax plans</li>
+                <li>Tax rates and revenue for custom plans are graphed</li>
+                <li>Includes slant tax and flat tax plans by default</li>
+                <li>Let users select which government budget items (like medicaid, defense, etc.) to include in the budget</li>
+                <li>Includes proposed government programs from Bernie Sanders and Andrew Yang</li>
+                <li>Users can create their own governemnt programs and add them to the budget</li>
+                <li>Calculates funding for each budget item starting from the top and going down</li>
+                <li>Shows how much additional revenue is needed or how much of a surplus of there is based on current revenue and the selected budget</li>
+                <li>Allows users to adjust target funding of each item (Ex. if defense starts at $600 billion, setting target funding changes its cost to $300 billion)</li>
+                <li>Auto-fit taxes button calculates a tax plan that meets the current budget</li>
+                <li>Auto-fit budget button adjusts the target funding of each budget item to meet current revenue</li>
+                <li>Displays information about the current year's GDP, debt, mean income and median income</li>
+                <li>Calculates a plan to reduce government debt and get it to be a % of the GDP</li>
+                <li>Lets users enter their income and compare their tax rate and after-tax income under the existing policy and under the new tax plan</li>
+                <li>Lets users create a UBI plan and adjust it similar to the slant tax</li>
+                <li>Has reset buttons to reset to the default options, default tax rates, and default budget target funding</li>
+                <li>All of the elements of the GUI have tooltip instructions that provide additional instructions</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="divider">
+    <div class="dividerHeading" id="Graphing">
+        <h2>Graphing</h2>
+    </div>
+    <div class="dividerContent">
+        <h2>Income Distribution</h2>
+        <p>Income distribution is shown as a bar graph. If the user is using the slant tax plan, poverty brackets are highlighted in red and brackets paying the maximum rate are highlighted in green.</p>
+        <div class="fitImageContainer">
+            <img alt="Income Distribution graph" class="fitImage" src="~/images/incomeDist.PNG" />
+        </div>
+        <br />
+        <h2>Tax Rates</h2>
+        <p>Tax rates are shown as a line graph. The existing tax rates from the IRS data are shown in dark yellow and the new rates are in dark red</p>
+        <div class="fitImageContainer">
+            <img alt="Tax Rates graph" class="fitImage" src="~/images/taxRates.PNG" />
+        </div>
+        <br />
+        <h2>Revenue</h2>
+        <p>Revenue per bracket is shown as a line graph. Old revenue is in dark green and new revenue is in light green</p>
+        <div class="fitImageContainer">
+            <img alt="Revenue graph" class="fitImage" src="~/images/revenue.PNG" />
+        </div>
+        <br />
+        <h2>UBI</h2>
+        <p>UBI per bracket is shown as a purple line graph.</p>
+        <div class="fitImageContainer">
+            <img alt="UBI graph" class="fitImage" src="~/images/UBI.PNG" />
+        </div>
+        <br />
+    </div>
+</section>
+
+<section class="divider">
+    <div class="dividerHeading" id="Controls">
+        <h2>Control Panel</h2>
+    </div>
+    <div class="dividerContent">
+        <h2>Tax Plans and Year Selector:</h2>
+        <div class="fitImageContainer">
+            <img alt="Select Tax Plan and Select Year" src="~/images/yearandtaxplanselector.PNG" />
+        </div>
+        <p>
+            <b>Year Selector</b> - Years of income data are loaded into the program when it starts up.
+            They are stored as CSV files and can be edited or the user can add their own. The year selector
+            lets the user select which set of data to display. By default the IRS.Gov's income tax data
+            from 2003 to 2018 is available. If the IRS released another set of income tax data it could easily
+            be added to the "res" folder and viewed along with the other years. State, local, or tax data
+            from another country can also be loaded into the program and used.
+        </p>
+        <p>
+            <b>Tax Plans</b> - Users are able to select which tax plan to look at. By default the slant tax, two
+            custom version of the slant tax, and the flat tax are available. Users can also add their own custom
+            tax plans. The delete button only deletes custom tax plans. The save button allows a user to save
+            the selected tax plan to a .TAX file, and it will be loaded into the program when you start it up
+            again. Users can save existing plans like the slant tax and it will be renamed "Slant Tax (modified)"
+            and they will be able to use the default options on it.
+        </p>
+        <hr class="whiteSpacer" />
+        
+        <h2>Tax Rate Sliders:</h2>
+        <div class="fitImageContainer">
+            <img alt="Slant Tax Sliders" src="~/images/SlantAdjustor.PNG" />
+            <img alt="Flat Tax Sliders" src="~/images/FlatAdjustor.PNG" />
+            <img alt="Individual Bracket Sliders" src="~/images/customAdjustor.PNG" />
+        </div>
+        <p>
+            <b>Slant Tax</b> - When working with the slant tax users can adjust the number of brackets
+            under the poverty line, the number of brackets paying the max rate, and the maximum tax rate.
+            There are also options to balance the population on both sides when you adjust the max brackets or
+            poverty line brackets. Users can use the auto-fit option which adjusts the slider values to meet
+            the current budget. By default the auto-fit button will try to get the lowest maximum rate and it
+            will adjust the number of max brackets to do this. There is also an option to not adjust max brackets
+            and only adjust the max rate. Users can also adjust each bracket individually.
+        </p>
+        <br />
+        <p>
+            <b>Flat Tax</b> - When working with the flat tax users can adjust the tax rate that all of the
+            brackets will pay. Users can use the auto-fit button to adjust the flat tax to meet the current
+            budget. Users can also adjust each bracket individually.
+        </p>
+        <br />
+        <p>
+            <b>Custom Tax Plans</b> - When working with custom tax plans users are only able to adjust each
+            bracket manually. They are not able to use the auto-fit button. When adjusting brackets manually
+            there is an option to select multiple brackets at a time and proportionally edit them. To do this
+            the user should check the lock rates checkbox and select how many adjacent brackets they want to edit.
+        </p>
+        <hr class="whiteSpacer" />
+        <h2>UBI Editing</h2>
+        <div class="fitImageContainer">
+            <img alt="UBI Sliders" src="~/images/UBIAdjustor.PNG" />
+        </div>
+        <p>
+            If the UBI is selected in the display options users can press the Edit UBI button in the Curve Editor
+            menu. From there they can adjust the different values for the UBI similar to the slant tax. Also the
+            Slant Brackets changes UBI checkbox will make the UBI brackets change when you change the poverty
+            or max brackets on the slant tax.
+        </p>
+        <hr class="whiteSpacer" />
+        <h2>Display Options</h2>
+        <div class="fitImageContainer">
+            <img alt="Display Checkboxes" src="~/images/DisplayOptions.PNG" />
+        </div>
+        <p>
+            In the control panel users can select which graphs to display. They can also choose to display the
+            mean and median incomes. Mean and median incomes are displayed as a line on the graph showing which
+            income bracket the income would be in.
+        </p>
+        <hr class="whiteSpacer" />
+        <h2>Target Funding and Other Options</h2>
+        <div class="fitImageContainer">
+            <img alt="Other Options" src="~/images/OtherOptions.PNG" />
+        </div>
+        <p>
+            Users are able to select any item in the budget, including custom government programs, and adjust
+            their target funding from 0-100% of the original cost. When target funding is changed the new cost
+            is displayed. The auto-fit budget button will adjust the target funding of each of the selected items
+            until the budget is less than the current revenue. The auto-fit button gives equal priority to each
+            budget item. Reset budget sets all of the target funding amounts to 100%.
+        </p>
+        <br />
+        <p>
+            The reset to default settings button chnages everything back to the default settings. If the slant tax
+            is selected the reset tax rates button changes all of the manually adjusted rates back to the slant
+            tax values. If the slant tax is not selected the reset tax rates button sets all of the selected tax
+            plan's rates to 0%.
+        </p>
+    </div>
+</section>
+
+<section class="divider">
+    <div class="dividerHeading" id="Output">
+        <h2>Output Panel</h2>
+    </div>
+    <div class="dividerContent">
+        <h2>Data Output:</h2>
+        <div class="fitImageContainer">
+            <img alt="Data Output" src="~/images/DataOutput.PNG" />
+        </div>
+        <p>
+            The first part of the output panel displays information based on the selected year and selected tax
+            plan.
+        </p>
+        <hr class="whiteSpacer" />
+        <h2>Income Statistics:</h2>
+        <div class="fitImageContainer">
+            <img alt="Mean and Median Income" src="~/images/incomeStats.PNG" />
+        </div>
+        <p>
+            The system displays the mean and median income and the difference between the two. These values
+            are displayed before and after the selected tax plan. The mean income is usually skewed towards the
+            higher end of the income distribution because of individuals that have a very high income. Median
+            incomes and the difference between mean and median give a better picture of how much people earn and
+            income inequality.
+        </p>
+        <hr class="whiteSpacer" />
+        <h2>Government Budget:</h2>
+        <div class="fitImageContainer">
+            <img alt="Existing Budget" src="~/images/ExistingBudget.PNG" />
+        </div>
+        <p>
+            The system displays the existing government budget and users can check which items they want included
+            in their custom government budget. The funding for each budget item is calculated from top to bottom,
+            and unchecking an item will pass its funding to items that are lower on the list.
+        </p>
+        <div class="fitImageContainer">
+            <img alt="Custom Budget" src="~/images/CustomBudget.PNG" />
+        </div>
+        <p>
+            Users can also select proposed plans by Bernie Sanders and Andrew Yang. Additionally they can add
+            their own government programs, name them and give them a cost. The funding for each selected item
+            will be calculated with the rest of the budget.
+        </p>
+        <hr class="whiteSpacer" />
+        <h2>Debt Reduction Calculator:</h2>
+        <div class="fitImageContainer">
+            <img alt="Debt Reduction Calculator" src="~/images/debtReduction.PNG" />
+        </div>
+        <p>
+            Users are able to calculate a plan to reduce the national debt. After the current budget is met, the extra
+            revneue that was collected can be used to pay off the national debt. The system lets users calculate a payment
+            plan based on a target percentage, number of years to reduce the debt, yearly GDP growth, and annual interest
+            rate. The user can then add the yearly payments to the government budget.
+        </p>
+        <p>
+            <b>How it Works:</b>
+        </p>
+        <p>
+            <b>Step 1</b>
+            <br />
+            To calculate a payment plan the system starts by calculating the projected GDP using the current GDP,
+            average GDP growth per year, and number of years that the plan will last. This is done using an annual
+            interst rate formula.
+        </p>
+        <p>
+            <b>Step 2</b>
+            <br />
+            Next the target debt is calculated using the projected GDP and target percentage.
+            If the target percentage is 0%, that means that all of the debt will be paid off. Otherwise the system will
+            find that percentage of the projected GDP.
+        </p>
+        <p>
+            <b>Step 3</b>
+            <br />
+            From there the system calculates the total interest by charging
+            the annual interest rate each year, as the debt is reduced. The interest payments per year is an average of
+            the total interest over the number of years. In reality the yearly interest payment will start higher and
+            go lower as the debt is paid off.
+        </p>
+        <p>
+            <b>Step 4</b>
+            <br />
+            The system finds the total amount that is being paid, including interest, and averages it over the number
+            of years. This yearly payment becomes the cost of the Debt Reduction budget item.
+        </p>
+        <hr class="whiteSpacer" />
+        <h2>Individual Income Calculator</h2>
+        <div class="fitImageContainer">
+            <img alt="Individual Income Calculator" src="~/images/IndividualIncomeCalc.PNG" />
+        </div>
+        <p>
+            Users can enter a yearly income and see what tax rate they would pay before and after the plan. They will also
+            be able to see their after-tax income with the existing and new tax plan. This feature helps users understand
+            how a proposed tax plan would effect their income. In this example someone making $35,000 per year will have
+            their tax rate nearly double under the proposed plan. While the tax rate doubles their after-tax income only
+            goes down by $2,000 per year. While $2,000 is not a small amount of money it is probably not as bad as one
+            would expect. In other examples with higher incomes the difference would be much more noticeable. 
+        </p>
+    </div>
+</section>
